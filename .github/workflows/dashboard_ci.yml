@@ -21,8 +21,9 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install pytest
-        pip install black  
+        pip install pytest==7.2.1
+        pip install black==23.11.0
+ 
 
     # Code Formatting Check with Black
     - name: Check code formatting with Black
