@@ -8,6 +8,7 @@ import streamlit as st
 import config as config_m
 import dashboard_utils as dashboard_m
 
+
 # load data
 @st.cache_data
 def load_data(path_to_file):
@@ -28,9 +29,7 @@ def load_data(path_to_file):
     google_drive_url = path_to_file
     csv_url = f'https://drive.google.com/uc?id={google_drive_url.split("/")[-2]}'
     raw_data = pd.read_csv(csv_url)
-    df = dashboard_m.complexity_score(
-        raw_data, weights=config_m.WEIGHTS
-    )
+    df = dashboard_m.complexity_score(raw_data, weights=config_m.WEIGHTS)
     return df
 
 
@@ -44,16 +43,16 @@ def main():
     """
     Main function to run the Streamlit app for the Student Performance Dashboard.
 
-    This function sets up the dashboard title, user input controls in the sidebar for 
+    This function sets up the dashboard title, user input controls in the sidebar for
     threshold selection, and displays tabs for different views - the main dashboard with
-    a scatter plot and a statistics tab. 
+    a scatter plot and a statistics tab.
 
     In the main dashboard, it identifies students falling below the set thresholds and
     visualizes them using a scatter plot. It also allows downloading a CSV file of the
     filtered data. The 'Statistics' tab provides options for custom scatter plot visualizations.
 
-    The scatter plot contrasts students who need support (below threshold) against others, 
-    helping to prioritize interventions based on the final grade and complexity score. 
+    The scatter plot contrasts students who need support (below threshold) against others,
+    helping to prioritize interventions based on the final grade and complexity score.
     """
     st.title("Student Performance Dashboard")
 
