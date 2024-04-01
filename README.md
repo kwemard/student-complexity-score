@@ -18,7 +18,7 @@ To ensure the functionality and reliability of the Student Performance Dashboard
 
 2. Run the tests using the following command:
 
-python -m pytest test_dashboard.py -vv 
+```python -m pytest test_dashboard.py -vv ```
 
 3. Review the output in the terminal to check for any failed tests and their error messages.
 
@@ -30,11 +30,11 @@ To set up the Student Performance Dashboard, follow these steps:
 
 2. Install required dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 2. Run the application:
 
-streamlit run app.py
+```streamlit run app.py```
 
 ## Docker Setup
 
@@ -44,13 +44,13 @@ If you prefer to run the application in a Docker container, follow these steps:
 1. Navigate to the directory containing your Dockerfile.
 2. Build the Docker image using the following command:
 
-docker build -t student-performance-dashboard .
+```docker build -t student-performance-dashboard .```
 
 
 ### Running the Docker Container
 1. Once the image is built, you can run the container with:
 
-docker run -p 8501:8501 student-performance-dashboard
+```docker run -p 8501:8501 student-performance-dashboard```
 
 This command maps port 8501 of the Docker container to port 8501 on your host machine.
 
