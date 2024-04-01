@@ -108,5 +108,5 @@ def extract_student_names(data, final_grade_threshold, complexity_score_threshol
 
 # Convert to CSV
 def convert_df_to_csv(df):
-    """ Create a csv file from dataframe"""
+    """Create a csv file from dataframe"""
     return df.to_csv(index=False).encode("utf-8")
